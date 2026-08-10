@@ -1,0 +1,95 @@
+---
+import SectionHeading from '../SectionHeading.astro';
+
+const steps = [
+	{
+		n: '1',
+		title: 'Listen',
+		desc: 'Understand context, constraints, and the real human dynamics behind the challenge.',
+	},
+	{
+		n: '2',
+		title: 'Align',
+		desc: 'Bring stakeholders to shared purpose, priorities, and a clear problem definition.',
+	},
+	{
+		n: '3',
+		title: 'Design',
+		desc: 'Shape practical pathways, roles, and decisions that people can act on together.',
+	},
+	{
+		n: '4',
+		title: 'Mobilize',
+		desc: 'Activate networks, capabilities, and communication to move from plan to progress.',
+	},
+	{
+		n: '5',
+		title: 'Sustain',
+		desc: 'Embed ownership, learning loops, and measures so impact continues beyond the engagement.',
+	},
+];
+---
+
+<section class="bg-cream px-5 py-20 sm:px-8" id="approach">
+	<div class="mx-auto max-w-7xl">
+		<SectionHeading title="Our Engagement Approach" />
+
+		<div class="relative">
+			<div
+				class="pointer-events-none absolute top-5 right-[10%] left-[10%] hidden h-px border-t border-dashed border-forest/30 md:block"
+				aria-hidden="true"
+			>
+			</div>
+
+			<ol class="grid gap-10 sm:grid-cols-2 md:grid-cols-5 md:gap-4">
+				{
+					steps.map((step) => (
+						<li class="relative text-center">
+							<span class="relative z-10 mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-forest font-sans text-sm font-semibold text-gold">
+								{step.n}
+							</span>
+							<div class="mx-auto mt-4 mb-3 flex h-10 w-10 items-center justify-center text-gold">
+								{step.n === '1' && (
+									<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M3 11a9 9 0 0 1 18 0" />
+										<path d="M12 14v4M9 21h6" />
+										<path d="M8 11v1a4 4 0 0 0 8 0v-1" />
+									</svg>
+								)}
+								{step.n === '2' && (
+									<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<circle cx="8" cy="10" r="3" />
+										<circle cx="16" cy="10" r="3" />
+										<path d="M3 19c1.5-3 4-4.5 5-4.5s3.5 1.5 5 4.5M11 19c1.5-3 4-4.5 5-4.5s3.5 1.5 5 4.5" />
+									</svg>
+								)}
+								{step.n === '3' && (
+									<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M12 3 4 7v5c0 4.5 3.2 8.4 8 9.5 4.8-1.1 8-5 8-9.5V7l-8-4Z" />
+										<path d="M9 12h6M12 9v6" />
+									</svg>
+								)}
+								{step.n === '4' && (
+									<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M5 19 12 5l7 14" />
+										<path d="M8.5 13h7" />
+									</svg>
+								)}
+								{step.n === '5' && (
+									<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M12 22c4-3 7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 3 8 7 11Z" />
+										<path d="M12 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+									</svg>
+								)}
+							</div>
+							<h3 class="font-display text-lg font-semibold text-forest">{step.title}</h3>
+							<p class="mx-auto mt-2 max-w-[14rem] font-sans text-xs leading-relaxed text-muted sm:text-[13px]">
+								{step.desc}
+							</p>
+						</li>
+					))
+				}
+			</ol>
+		</div>
+	</div>
+</section>

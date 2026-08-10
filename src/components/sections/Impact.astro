@@ -1,0 +1,120 @@
+---
+const impacts = [
+	{
+		title: 'Medical Society Development',
+		desc: 'Strengthen relevance, governance, and member value so societies can lead with clarity.',
+	},
+	{
+		title: 'Stakeholder Alignment',
+		desc: 'Build shared understanding across clinical, policy, industry, and community voices.',
+	},
+	{
+		title: 'Capability Building',
+		desc: 'Equip leaders and teams with the skills to navigate complexity and sustain progress.',
+	},
+	{
+		title: 'Impact Measurement',
+		desc: 'Define meaningful indicators that connect human outcomes to strategic decisions.',
+	},
+];
+
+const worlds = [
+	{ label: 'Healthcare', icon: 'heart' },
+	{ label: 'Public Policy', icon: 'landmark' },
+	{ label: 'Stakeholder Engagement', icon: 'users' },
+	{ label: 'Medical Societies', icon: 'award' },
+	{ label: 'Human Impact', icon: 'spark' },
+];
+---
+
+<section class="relative overflow-hidden bg-cream" id="about">
+	<img
+		src="/images/tree-of-life.svg"
+		alt=""
+		class="pointer-events-none absolute top-1/2 left-1/2 h-[90%] w-auto -translate-x-1/2 -translate-y-1/2 opacity-[0.06]"
+		aria-hidden="true"
+	/>
+
+	<div class="relative mx-auto grid max-w-7xl lg:grid-cols-2">
+		<div class="px-5 py-16 sm:px-8 lg:py-20">
+			<h2 class="font-display text-2xl font-semibold tracking-wide text-forest uppercase sm:text-3xl">
+				Impact in Action
+			</h2>
+			<ul class="mt-8 space-y-7">
+				{
+					impacts.map((item) => (
+						<li class="flex gap-4">
+							<span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/50 text-gold">
+								<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+									<path d="M12 3 4 7v5c0 4.5 3.2 8.4 8 9.5 4.8-1.1 8-5 8-9.5V7l-8-4Z" />
+								</svg>
+							</span>
+							<div>
+								<h3 class="font-display text-lg font-semibold text-forest">{item.title}</h3>
+								<p class="mt-1 font-sans text-sm leading-relaxed text-muted">{item.desc}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+
+		<div class="bg-cream-dark/80 px-5 py-16 sm:px-8 lg:py-20">
+			<h2 class="font-display text-2xl font-semibold tracking-wide text-forest uppercase sm:text-3xl">
+				What Makes Panchalee.Connect Different
+			</h2>
+			<div class="mt-6 space-y-4 font-sans text-sm leading-relaxed text-muted sm:text-[15px]">
+				<p>
+					We work at the intersection of systems and people — where strategy meets culture,
+					and where good intentions need structure to become results.
+				</p>
+				<p>
+					Our approach blends healthcare insight, public-policy fluency, and deep stakeholder
+					craft. We do not just advise from the outside; we help create the conditions for
+					alignment and ownership inside the work.
+				</p>
+				<p>
+					The result is practical progress: clearer decisions, stronger coalitions, and
+					impact that can be felt and measured.
+				</p>
+			</div>
+
+			<div class="mt-10 rounded-sm border border-line bg-cream p-5 sm:p-6">
+				<p class="font-display text-base font-semibold text-forest">We bridge five worlds:</p>
+				<ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-5">
+					{
+						worlds.map((world) => (
+							<li class="flex flex-col items-center gap-2 text-center">
+								<span class="flex h-11 w-11 items-center justify-center rounded-full border border-gold/40 text-gold">
+									<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										{world.icon === 'heart' && (
+											<path d="M19.5 12.5c0 4.5-7.5 8-7.5 8s-7.5-3.5-7.5-8a4.5 4.5 0 0 1 7.5-3.3 4.5 4.5 0 0 1 7.5 3.3Z" />
+										)}
+										{world.icon === 'landmark' && <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-5h6v5" />}
+										{world.icon === 'users' && (
+											<>
+												<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+												<circle cx="9" cy="7" r="4" />
+												<path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+											</>
+										)}
+										{world.icon === 'award' && (
+											<>
+												<circle cx="12" cy="9" r="5" />
+												<path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5" />
+											</>
+										)}
+										{world.icon === 'spark' && (
+											<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />
+										)}
+									</svg>
+								</span>
+								<span class="font-sans text-[11px] leading-tight font-medium text-ink">{world.label}</span>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

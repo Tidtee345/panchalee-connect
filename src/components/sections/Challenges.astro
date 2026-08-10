@@ -1,0 +1,107 @@
+---
+import SectionHeading from '../SectionHeading.astro';
+
+const challenges = [
+	{
+		title: 'Multiple stakeholders with competing priorities',
+		icon: 'users',
+	},
+	{
+		title: 'Medical societies navigating growth and relevance',
+		icon: 'building',
+	},
+	{
+		title: 'Healthcare ecosystems struggling to align on action',
+		icon: 'network',
+	},
+	{
+		title: 'Strategies that stall between design and delivery',
+		icon: 'route',
+	},
+	{
+		title: 'Public programs needing clarity across agencies',
+		icon: 'landmark',
+	},
+	{
+		title: 'Complex initiatives without shared measures of impact',
+		icon: 'target',
+	},
+];
+---
+
+<section class="bg-cream px-5 py-20 sm:px-8" id="challenges">
+	<div class="mx-auto max-w-7xl">
+		<SectionHeading title="The Challenges We Help Solve" />
+
+		<div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+			<div>
+				<p class="font-sans text-base leading-relaxed text-muted sm:text-lg">
+					Complex challenges rarely fail for lack of ideas. They fail when people,
+					priorities, and systems cannot move together. We help leaders create the
+					clarity, alignment, and momentum that turn intention into coordinated action.
+				</p>
+			</div>
+
+			<ul class="grid gap-5 sm:grid-cols-2">
+				{
+					challenges.map((item) => (
+						<li class="flex items-start gap-3">
+							<span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-forest/20 bg-cream-dark text-forest">
+								{item.icon === 'users' && (
+									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+										<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+										<circle cx="9" cy="7" r="4" />
+										<path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+									</svg>
+								)}
+								{item.icon === 'building' && (
+									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+										<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+									</svg>
+								)}
+								{item.icon === 'network' && (
+									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+										<circle cx="12" cy="5" r="2.5" />
+										<circle cx="5" cy="19" r="2.5" />
+										<circle cx="19" cy="19" r="2.5" />
+										<path d="M12 7.5v4M12 11.5 6.5 17M12 11.5l5.5 5.5" />
+									</svg>
+								)}
+								{item.icon === 'route' && (
+									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+										<circle cx="6" cy="19" r="2" />
+										<path d="M6 17V9a4 4 0 0 1 4-4h4" />
+										<circle cx="18" cy="5" r="2" />
+									</svg>
+								)}
+								{item.icon === 'landmark' && (
+									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+										<path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-5h6v5" />
+									</svg>
+								)}
+								{item.icon === 'target' && (
+									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+										<circle cx="12" cy="12" r="8" />
+										<circle cx="12" cy="12" r="4" />
+										<circle cx="12" cy="12" r="1" fill="currentColor" />
+									</svg>
+								)}
+							</span>
+							<p class="font-sans text-sm leading-snug text-ink sm:text-[15px]">{item.title}</p>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+
+		<div
+			class="mt-14 flex items-start gap-4 rounded-sm border border-line bg-cream-dark/60 px-5 py-5 sm:items-center sm:px-8"
+		>
+			<img src="/images/tree-mark.svg" alt="" class="mt-0.5 h-8 w-8 shrink-0" width="32" height="32" />
+			<p class="font-sans text-sm leading-relaxed text-muted sm:text-base">
+				We create the connective tissue between strategy and people — so complex systems can
+				move with clarity, trust, and shared purpose.
+			</p>
+		</div>
+	</div>
+</section>

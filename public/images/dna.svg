@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 320" fill="none" aria-hidden="true">
+  <path d="M25 10 C55 40, 55 70, 25 100 C-5 130, -5 160, 25 190 C55 220, 55 250, 25 280 C10 295, 10 305, 20 315"
+        stroke="#C5A358" stroke-width="1.2" opacity="0.55"/>
+  <path d="M55 10 C25 40, 25 70, 55 100 C85 130, 85 160, 55 190 C25 220, 25 250, 55 280 C70 295, 70 305, 60 315"
+        stroke="#C5A358" stroke-width="1.2" opacity="0.55"/>
+  <g fill="#C5A358">
+    <circle cx="25" cy="25" r="2.2"/><circle cx="55" cy="25" r="2.2"/>
+    <circle cx="40" cy="40" r="1.6"/><circle cx="40" cy="55" r="1.6"/>
+    <circle cx="55" cy="70" r="2.2"/><circle cx="25" cy="70" r="2.2"/>
+    <circle cx="40" cy="85" r="1.6"/><circle cx="40" cy="100" r="1.6"/>
+    <circle cx="25" cy="115" r="2.2"/><circle cx="55" cy="115" r="2.2"/>
+    <circle cx="40" cy="130" r="1.6"/><circle cx="40" cy="145" r="1.6"/>
+    <circle cx="55" cy="160" r="2.2"/><circle cx="25" cy="160" r="2.2"/>
+    <circle cx="40" cy="175" r="1.6"/><circle cx="40" cy="190" r="1.6"/>
+    <circle cx="25" cy="205" r="2.2"/><circle cx="55" cy="205" r="2.2"/>
+    <circle cx="40" cy="220" r="1.6"/><circle cx="40" cy="235" r="1.6"/>
+    <circle cx="55" cy="250" r="2.2"/><circle cx="25" cy="250" r="2.2"/>
+    <circle cx="40" cy="265" r="1.6"/><circle cx="40" cy="280" r="1.6"/>
+    <circle cx="30" cy="300" r="2"/><circle cx="50" cy="300" r="2"/>
+  </g>
+</svg>

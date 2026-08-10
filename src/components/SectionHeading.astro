@@ -1,0 +1,40 @@
+---
+interface Props {
+	title: string;
+	tone?: 'light' | 'dark';
+	align?: 'left' | 'center';
+	class?: string;
+}
+
+const { title, tone = 'light', align = 'center', class: className = '' } = Astro.props;
+const text = tone === 'dark' ? 'text-gold' : 'text-forest';
+const line = tone === 'dark' ? 'bg-gold/50' : 'bg-gold';
+---
+
+<div
+	class:list={[
+		'mb-10 flex items-center gap-4',
+		align === 'center' && 'justify-center',
+		className,
+	]}
+>
+	{
+		align === 'center' && (
+			<span class:list={['hidden h-px w-16 sm:block', line]} aria-hidden="true" />
+		)
+	}
+	<h2
+		class:list={[
+			'font-display text-2xl font-semibold tracking-wide uppercase sm:text-3xl',
+			text,
+			align === 'center' && 'text-center',
+		]}
+	>
+		{title}
+	</h2>
+	{
+		align === 'center' && (
+			<span class:list={['hidden h-px w-16 sm:block', line]} aria-hidden="true" />
+		)
+	}
+</div>

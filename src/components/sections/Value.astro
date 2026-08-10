@@ -1,0 +1,79 @@
+---
+import SectionHeading from '../SectionHeading.astro';
+
+const columns = [
+	{
+		title: 'Healthcare Organizations',
+		points: [
+			'Cross-functional strategy alignment',
+			'Stakeholder mapping and engagement',
+			'Operating model and change readiness',
+			'Impact measurement design',
+		],
+		icon: 'heart',
+	},
+	{
+		title: 'Professional & Medical Societies',
+		points: [
+			'Membership value and relevance',
+			'Leadership and governance clarity',
+			'Program and partnership design',
+			'Capability and advocacy pathways',
+		],
+		icon: 'award',
+	},
+	{
+		title: 'Government & Public Sector',
+		points: [
+			'Multi-agency coordination',
+			'Policy-to-practice translation',
+			'Public–private collaboration',
+			'Sustainable implementation systems',
+		],
+		icon: 'globe',
+	},
+];
+---
+
+<section class="bg-forest px-5 py-20 sm:px-8" id="value">
+	<div class="mx-auto max-w-7xl">
+		<SectionHeading title="Where We Create Value" tone="dark" />
+
+		<div class="grid gap-10 md:grid-cols-3 md:gap-8">
+			{
+				columns.map((col) => (
+					<div class="text-center">
+						<div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 text-gold">
+							{col.icon === 'heart' && (
+								<svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+									<path d="M19.5 12.5c0 4.5-7.5 8-7.5 8s-7.5-3.5-7.5-8a4.5 4.5 0 0 1 7.5-3.3 4.5 4.5 0 0 1 7.5 3.3Z" />
+								</svg>
+							)}
+							{col.icon === 'award' && (
+								<svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+									<circle cx="12" cy="9" r="5" />
+									<path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5" />
+								</svg>
+							)}
+							{col.icon === 'globe' && (
+								<svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+									<circle cx="12" cy="12" r="9" />
+									<path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+								</svg>
+							)}
+						</div>
+						<h3 class="font-display text-xl font-semibold text-gold">{col.title}</h3>
+						<ul class="mt-4 space-y-2.5 text-left">
+							{col.points.map((point) => (
+								<li class="flex items-start gap-2.5 font-sans text-sm leading-snug text-white/85">
+									<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+									{point}
+								</li>
+							))}
+						</ul>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

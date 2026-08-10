@@ -1,0 +1,72 @@
+---
+import SectionHeading from '../SectionHeading.astro';
+
+const experiences = [
+	{ label: 'Healthcare Industry', icon: 'hospital' },
+	{ label: 'Rare Diseases', icon: 'dna' },
+	{ label: 'Medical Societies', icon: 'award' },
+	{ label: 'Public Affairs', icon: 'landmark' },
+	{ label: 'Patient Advocacy', icon: 'heart' },
+	{ label: 'Regional & International Networks', icon: 'globe' },
+	{ label: 'Public–Private Partnerships', icon: 'handshake' },
+];
+---
+
+<section class="bg-cream px-5 py-20 sm:px-8" id="experience">
+	<div class="mx-auto max-w-7xl">
+		<SectionHeading title="Selected Experience" />
+
+		<ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 lg:gap-4">
+			{
+				experiences.map((item) => (
+					<li class="flex flex-col items-center gap-3 text-center">
+						<span class="flex h-14 w-14 items-center justify-center text-forest">
+							<svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+								{item.icon === 'hospital' && (
+									<>
+										<path d="M3 21h18M5 21V7l7-4 7 4v14" />
+										<path d="M10 21v-6h4v6M12 9v4M10 11h4" />
+									</>
+								)}
+								{item.icon === 'dna' && (
+									<>
+										<path d="M5 4c4 4 10 4 14 0M5 20c4-4 10-4 14 0" />
+										<path d="M8 8c2.5 2 5.5 2 8 0M8 16c2.5-2 5.5-2 8 0" />
+										<path d="M7 6l10 12M17 6 7 18" />
+									</>
+								)}
+								{item.icon === 'award' && (
+									<>
+										<circle cx="12" cy="9" r="5" />
+										<path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5" />
+									</>
+								)}
+								{item.icon === 'landmark' && <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-5h6v5" />}
+								{item.icon === 'heart' && (
+									<path d="M19.5 12.5c0 4.5-7.5 8-7.5 8s-7.5-3.5-7.5-8a4.5 4.5 0 0 1 7.5-3.3 4.5 4.5 0 0 1 7.5 3.3Z" />
+								)}
+								{item.icon === 'globe' && (
+									<>
+										<circle cx="12" cy="12" r="9" />
+										<path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+									</>
+								)}
+								{item.icon === 'handshake' && (
+									<>
+										<path d="M8 13 4.5 9.5a2 2 0 0 1 0-3L7 4l5 5" />
+										<path d="M16 13l3.5-3.5a2 2 0 0 0 0-3L17 4l-5 5" />
+										<path d="M9 14l1.5 1.5a2 2 0 0 0 3 0L15 14" />
+										<path d="M8 13v5M16 13v5" />
+									</>
+								)}
+							</svg>
+						</span>
+						<span class="max-w-[8.5rem] font-sans text-[11px] leading-snug font-medium text-ink sm:text-xs">
+							{item.label}
+						</span>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</section>

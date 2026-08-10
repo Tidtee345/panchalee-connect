@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#C5A358" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#C5A358" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="95" r="90" fill="url(#glow)"/>
+  <!-- trunk -->
+  <path d="M100 210 V95" stroke="#C5A358" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- branches -->
+  <path d="M100 170 C70 155, 45 140, 35 115" stroke="#C5A358" stroke-width="1.6" fill="none"/>
+  <path d="M100 160 C130 145, 155 130, 165 105" stroke="#C5A358" stroke-width="1.6" fill="none"/>
+  <path d="M100 140 C75 125, 55 100, 48 75" stroke="#C5A358" stroke-width="1.4" fill="none"/>
+  <path d="M100 130 C125 115, 145 90, 152 68" stroke="#C5A358" stroke-width="1.4" fill="none"/>
+  <path d="M100 115 C85 95, 78 70, 82 48" stroke="#C5A358" stroke-width="1.3" fill="none"/>
+  <path d="M100 110 C115 90, 122 68, 118 45" stroke="#C5A358" stroke-width="1.3" fill="none"/>
+  <!-- canopy dots -->
+  <g fill="#C5A358">
+    <circle cx="35" cy="115" r="3.2"/><circle cx="48" cy="98" r="2.4"/><circle cx="28" cy="95" r="2"/>
+    <circle cx="165" cy="105" r="3.2"/><circle cx="152" cy="88" r="2.4"/><circle cx="172" cy="88" r="2"/>
+    <circle cx="48" cy="75" r="3"/><circle cx="38" cy="62" r="2.2"/><circle cx="58" cy="58" r="2"/>
+    <circle cx="152" cy="68" r="3"/><circle cx="162" cy="55" r="2.2"/><circle cx="142" cy="52" r="2"/>
+    <circle cx="82" cy="48" r="3.5"/><circle cx="70" cy="40" r="2.3"/><circle cx="90" cy="32" r="2.5"/>
+    <circle cx="118" cy="45" r="3.5"/><circle cx="130" cy="36" r="2.3"/><circle cx="110" cy="30" r="2.5"/>
+    <circle cx="100" cy="28" r="4"/><circle cx="100" cy="55" r="2.8"/><circle cx="88" cy="70" r="2.2"/>
+    <circle cx="112" cy="68" r="2.2"/><circle cx="100" cy="85" r="2.5"/><circle cx="75" cy="110" r="2"/>
+    <circle cx="125" cy="108" r="2"/><circle cx="60" cy="130" r="2.2"/><circle cx="140" cy="128" r="2.2"/>
+  </g>
+</svg>
