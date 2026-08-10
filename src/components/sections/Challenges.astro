@@ -1,6 +1,8 @@
 ---
 import SectionHeading from '../SectionHeading.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const challenges = [
 	{
 		title: 'Multiple stakeholders with competing priorities',
@@ -97,7 +99,7 @@ const challenges = [
 		<div
 			class="mt-14 flex items-start gap-4 rounded-sm border border-line bg-cream-dark/60 px-5 py-5 sm:items-center sm:px-8"
 		>
-			<img src="/images/tree-mark.svg" alt="" class="mt-0.5 h-8 w-8 shrink-0" width="32" height="32" />
+			<img src={`${base}images/tree-mark.svg`} alt="" class="mt-0.5 h-8 w-8 shrink-0" width="32" height="32" />
 			<p class="font-sans text-sm leading-relaxed text-muted sm:text-base">
 				We create the connective tissue between strategy and people — so complex systems can
 				move with clarity, trust, and shared purpose.

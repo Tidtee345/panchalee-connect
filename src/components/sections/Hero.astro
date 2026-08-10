@@ -1,15 +1,16 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="relative overflow-hidden bg-forest">
 	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
 		<img
-			src="/images/tree-of-life.svg"
+			src={`${base}images/tree-of-life.svg`}
 			alt=""
 			class="absolute top-1/2 left-[42%] hidden h-[120%] w-auto -translate-y-1/2 opacity-40 lg:block"
 		/>
 		<img
-			src="/images/dna.svg"
+			src={`${base}images/dna.svg`}
 			alt=""
 			class="absolute top-8 right-4 hidden h-[85%] w-auto opacity-30 xl:block"
 		/>
@@ -53,7 +54,7 @@
 		<div class="relative mx-auto w-full max-w-md lg:max-w-none">
 			<div class="relative aspect-[4/5] overflow-hidden rounded-sm sm:aspect-[5/6]">
 				<img
-					src="/images/portrait.png"
+					src={`${base}images/portrait.png`}
 					alt="Panchalee — founder of Panchalee.Connect"
 					class="h-full w-full object-cover object-top"
 					width="800"
