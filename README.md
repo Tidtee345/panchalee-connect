@@ -27,3 +27,5 @@ src/
   styles/       # global.css (Tailwind + theme tokens)
 public/         # Static assets
 ```
+
+Commit to trigger GitHub Pages build at https://tidtee345.github.io/panchalee-connect/
