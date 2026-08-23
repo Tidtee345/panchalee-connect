@@ -47,31 +47,35 @@ const base = import.meta.env.BASE_URL;
 		</div>
 
 		<div class="relative mx-auto w-full max-w-md lg:max-w-none">
-			<div class="relative aspect-[4/5] overflow-visible sm:aspect-[5/6]">
+			<div class="relative h-[20rem] overflow-visible sm:h-[24rem] lg:h-[28rem]">
 				<img
-					src={`${base}images/hero-bg-portrait.png`}
-					alt="Panchalee — founder of Panchalee.Connect"
-					class="relative z-10 h-full w-full object-cover object-center"
-					width="624"
-					height="426"
+					src={`${base}images/hero-bg-tree.png`}
+					alt=""
+					class="hero-scene absolute inset-0 h-full w-full object-cover object-[center_42%]"
+					width="1536"
+					height="1024"
+					aria-hidden="true"
 				/>
-				<!-- Soft edge blend into forest so the cutout never reads as a card -->
+				<img
+					src={`${base}images/panchalee-portrait.png`}
+					alt="Panchalee — founder of Panchalee.Connect"
+					class="hero-portrait absolute right-[-8%] bottom-0 z-10 h-[78%] w-auto max-w-[62%] object-contain object-right-bottom lg:right-[-10%] lg:h-[82%]"
+					width="500"
+					height="500"
+				/>
+				<!-- Soft edge blend into forest so neither scene nor portrait reads as a card -->
 				<div
-					class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-24 bg-gradient-to-t from-forest via-forest/70 to-transparent"
+					class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-28 bg-gradient-to-t from-forest via-forest/80 to-transparent"
 				>
 				</div>
 				<div
-					class="pointer-events-none absolute inset-y-0 left-0 z-20 w-16 bg-gradient-to-r from-forest to-transparent"
-				>
-				</div>
-				<div
-					class="pointer-events-none absolute inset-y-0 right-0 z-20 w-16 bg-gradient-to-l from-forest to-transparent"
+					class="pointer-events-none absolute inset-y-0 left-0 z-20 w-24 bg-gradient-to-r from-forest to-transparent"
 				>
 				</div>
 			</div>
 
 			<blockquote
-				class="absolute right-0 bottom-6 left-0 z-30 mx-4 rounded-sm border border-gold/30 bg-forest/75 p-5 backdrop-blur-sm sm:left-auto sm:max-w-xs"
+				class="absolute bottom-6 left-4 z-30 max-w-xs rounded-sm border border-gold/30 bg-forest/75 p-5 backdrop-blur-sm"
 			>
 				<p
 					class="font-display text-lg leading-snug text-gold italic sm:text-xl"
@@ -84,3 +88,22 @@ const base = import.meta.env.BASE_URL;
 		</div>
 	</div>
 </section>
+
+<style>
+	.hero-scene {
+		-webkit-mask-image: radial-gradient(ellipse 78% 88% at 58% 48%, #000 38%, transparent 76%);
+		mask-image: radial-gradient(ellipse 78% 88% at 58% 48%, #000 38%, transparent 76%);
+	}
+
+	.hero-portrait {
+		filter: contrast(1.14) saturate(1.08) brightness(1.05);
+		-webkit-mask-image:
+			linear-gradient(to top, transparent 0%, #000 16%, #000 90%, transparent 100%),
+			linear-gradient(to left, transparent 0%, #000 12%, #000 100%);
+		mask-image:
+			linear-gradient(to top, transparent 0%, #000 16%, #000 90%, transparent 100%),
+			linear-gradient(to left, transparent 0%, #000 12%, #000 100%);
+		-webkit-mask-composite: source-in;
+		mask-composite: intersect;
+	}
+</style>
