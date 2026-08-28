@@ -4,95 +4,62 @@ import SectionHeading from '../SectionHeading.astro';
 const base = import.meta.env.BASE_URL;
 
 const challenges = [
-	{
-		title: 'Multiple stakeholders with competing priorities',
-		icon: 'icon-stakeholders.png',
-	},
-	{
-		title: 'Medical societies navigating growth and relevance',
-		icon: 'icon-compass.png',
-	},
-	{
-		title: 'Healthcare ecosystems struggling to align on action',
-		icon: 'icon-dna.png',
-	},
-	{
-		title: 'Strategies that stall between design and delivery',
-		icon: 'icon-compass.png',
-	},
-	{
-		title: 'Public programs needing clarity across agencies',
-		icon: 'icon-stakeholders.png',
-	},
-	{
-		title: 'Complex initiatives without shared measures of impact',
-		icon: 'icon-target.png',
-	},
+  {
+    title: 'Multiple stakeholders with competing priorities',
+    icon: 'icon-stakeholders.png',
+  },
+  {
+    title: 'Medical societies navigating growth and relevance',
+    icon: 'icon-compass.png',
+  },
+  {
+    title: 'Healthcare ecosystems struggling to align on action',
+    icon: 'icon-dna.png',
+  },
+  {
+    title: 'Strategies that stall between design and delivery',
+    icon: 'icon-compass.png',
+  },
+  {
+    title: 'Public programs needing clarity across agencies',
+    icon: 'icon-stakeholders.png',
+  },
+  {
+    title: 'Complex initiatives without shared measures of impact',
+    icon: 'icon-target.png',
+  },
 ];
 ---
 
 <section class="bg-cream px-5 py-20 sm:px-8" id="challenges">
-	<div class="mx-auto max-w-7xl">
-		<SectionHeading title="The Challenges We Help Solve" />
+  <div class="mx-auto max-w-7xl">
+    <SectionHeading title="The Challenges We Help Solve" />
 
-		<div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-			<div>
-				<p class="font-sans text-base leading-relaxed text-muted sm:text-lg">
-					Complex challenges rarely fail for lack of ideas. They fail when people,
-					priorities, and systems cannot move together. We help leaders create the
-					clarity, alignment, and momentum that turn intention into coordinated action.
-				</p>
-			</div>
+    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div>
+        <p class="font-sans text-base leading-relaxed text-muted sm:text-lg">
+          Complex challenges rarely fail for lack of ideas. They fail when people,
+          priorities, and systems cannot move together. We help leaders create the
+          clarity, alignment, and momentum that turn intention into coordinated action.
+        </p>
+      </div>
 
-			<ul class="grid gap-5 sm:grid-cols-2">
-				{
-					challenges.map((item) => (
-						<li class="flex items-start gap-4">
-  <img 
-    src={`${base}images/${item.icon}`} 
-    alt="" 
-    class="h-10 w-10 shrink-0 object-contain" 
-  />
-  <p class="font-sans text-base leading-relaxed text-forest">
-    {item.title}
-  </p>
-</li>
-								)}
-								{item.icon === 'route' && (
-									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-										<circle cx="6" cy="19" r="2" />
-										<path d="M6 17V9a4 4 0 0 1 4-4h4" />
-										<circle cx="18" cy="5" r="2" />
-									</svg>
-								)}
-								{item.icon === 'landmark' && (
-									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-										<path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-5h6v5" />
-									</svg>
-								)}
-								{item.icon === 'target' && (
-									<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-										<circle cx="12" cy="12" r="8" />
-										<circle cx="12" cy="12" r="4" />
-										<circle cx="12" cy="12" r="1" fill="currentColor" />
-									</svg>
-								)}
-							</span>
-							<p class="font-sans text-sm leading-snug text-ink sm:text-[15px]">{item.title}</p>
-						</li>
-					))
-				}
-			</ul>
-		</div>
-
-		<div
-			class="mt-14 flex items-start gap-4 rounded-sm border border-line bg-cream-dark/60 px-5 py-5 sm:items-center sm:px-8"
-		>
-			<img src={`${base}images/tree-mark.svg`} alt="" class="mt-0.5 h-8 w-8 shrink-0" width="32" height="32" />
-			<p class="font-sans text-sm leading-relaxed text-muted sm:text-base">
-				We create the connective tissue between strategy and people — so complex systems can
-				move with clarity, trust, and shared purpose.
-			</p>
-		</div>
-	</div>
+      <ul class="grid gap-5 sm:grid-cols-2">
+        {
+          challenges.map((item) => (
+            <li class="flex items-start gap-4">
+              <img 
+                src={`${base}images/${item.icon}`} 
+                alt="" 
+                class="h-10 w-10 shrink-0 object-contain" 
+              />
+              <p class="font-sans text-base leading-relaxed text-forest">
+                {item.title}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
 </section>
