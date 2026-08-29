@@ -2,31 +2,36 @@
 import SectionHeading from '../SectionHeading.astro';
 
 const steps = [
-	{
-		n: '1',
-		title: 'Listen',
-		desc: 'Understand context, constraints, and the real human dynamics behind the challenge.',
-	},
-	{
-		n: '2',
-		title: 'Align',
-		desc: 'Bring stakeholders to shared purpose, priorities, and a clear problem definition.',
-	},
-	{
-		n: '3',
-		title: 'Design',
-		desc: 'Shape practical pathways, roles, and decisions that people can act on together.',
-	},
-	{
-		n: '4',
-		title: 'Mobilize',
-		desc: 'Activate networks, capabilities, and communication to move from plan to progress.',
-	},
-	{
-		n: '5',
-		title: 'Sustain',
-		desc: 'Embed ownership, learning loops, and measures so impact continues beyond the engagement.',
-	},
+  {
+    n: '1',
+    title: 'Listen',
+    desc: 'Understand context, constraints, and the real human dynamics behind the challenge.',
+    icon: '/approach-listen.png', 
+  },
+  {
+    n: '2',
+    title: 'Align',
+    desc: 'Bring stakeholders to shared purpose, priorities, and a clear problem definition.',
+    icon: '/approach-align.png', 
+  },
+  {
+    n: '3',
+    title: 'Design',
+    desc: 'Shape practical pathways, roles, and decisions that people can act on together.',
+    icon: '/approach-design.png', 
+  },
+  {
+    n: '4',
+    title: 'Mobilize',
+    desc: 'Activate networks, capabilities, and communication to move from plan to progress.',
+    icon: '/approach-mobilize.png', 
+  },
+  {
+    n: '5',
+    title: 'Sustain',
+    desc: 'Embed ownership, learning loops, and measures so impact continues beyond the engagement.',
+    icon: '/approach-sustain.png',
+  },
 ];
 ---
 
@@ -48,40 +53,9 @@ const steps = [
                 {step.n}
               </span>
 
-              <!-- SVG Icon เดิมของพี่ (สีทองพรีเมียม) -->
-              <div class="mt-2 mb-4 flex h-10 w-10 items-center justify-center text-gold">
-                {step.n === '1' && (
-                  <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M3 11a9 9 0 0 1 18 0" />
-                    <path d="M12 14v4M9 21h6" />
-                    <path d="M8 11v1a4 4 0 0 0 8 0v-1" />
-                  </svg>
-                )}
-                {step.n === '2' && (
-                  <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="8" cy="10" r="3" />
-                    <circle cx="16" cy="10" r="3" />
-                    <path d="M3 19c1.5-3 4-4.5 5-4.5s3.5 1.5 5 4.5M11 19c1.5-3 4-4.5 5-4.5s3.5 1.5 5 4.5" />
-                  </svg>
-                )}
-                {step.n === '3' && (
-                  <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 3l8 4v6c0 5.5-3.8 10.2-8 11-4.2-.8-8-5.5-8-11V7l8-4z" />
-                    <path d="M12 8v8M8 12h8" />
-                  </svg>
-                )}
-                {step.n === '4' && (
-                  <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7" />
-                  </svg>
-                )}
-                {step.n === '5' && (
-                  <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                )}
-              </div>
+             <div class="mt-2 mb-4 flex h-16 w-16 items-center justify-center">
+  <img src={step.icon} alt={step.title} class="h-full w-full object-contain drop-shadow-md" />
+</div>
 
               <!-- Title -->
               <h3 class="font-display mb-3 text-center text-lg font-semibold text-forest">
