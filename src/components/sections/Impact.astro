@@ -50,11 +50,9 @@ const worlds = [
 				{
 					impacts.map((item) => (
 						<li class="flex gap-4">
-							<span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/50 text-gold">
-								<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-									<path d="M12 3 4 7v5c0 4.5 3.2 8.4 8 9.5 4.8-1.1 8-5 8-9.5V7l-8-4Z" />
-								</svg>
-							</span>
+							<span class="mt-1 flex h-12 w-12 shrink-0 items-center justify-center">
+        <img src={item.icon} alt={item.title} class="h-full w-full object-contain drop-shadow-md" />
+      </span>
 							<div>
 								<h3 class="font-display text-lg font-semibold text-forest">{item.title}</h3>
 								<p class="mt-1 font-sans text-sm leading-relaxed text-muted">{item.desc}</p>
