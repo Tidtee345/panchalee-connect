@@ -2,61 +2,62 @@
 import SectionHeading from '../SectionHeading.astro';
 
 const columns = [
-	{
-		title: 'Healthcare Organizations',
-		points: [
-			'Cross-functional strategy alignment',
-			'Stakeholder mapping and engagement',
-			'Operating model and change readiness',
-			'Impact measurement design',
-		],
-		icon: '/value-healthcare.png',
-	},
-	{
-		title: 'Professional & Medical Societies',
-		points: [
-			'Membership value and relevance',
-			'Leadership and governance clarity',
-			'Program and partnership design',
-			'Capability and advocacy pathways',
-		],
-		icon: '/icon-medical-societies.png',
-	},
-	{
-		title: 'Government & Public Sector',
-		points: [
-			'Multi-agency coordination',
-			'Policy-to-practice translation',
-			'Public–private collaboration',
-			'Sustainable implementation systems',
-		],
-		icon: '/icon-government-public-sector.png',
-	},
+  {
+    title: 'Healthcare Organizations',
+    points: [
+      'Cross-functional strategy alignment',
+      'Stakeholder mapping and engagement',
+      'Operating model and change readiness',
+      'Impact measurement design',
+    ],
+    icon: '/value-healthcare.png',
+  },
+  {
+    title: 'Professional & Medical Societies',
+    points: [
+      'Membership value and relevance',
+      'Leadership and governance clarity',
+      'Program and partnership design',
+      'Capability and advocacy pathways',
+    ],
+    icon: '/icon-medical-societies.png',
+  },
+  {
+    title: 'Government & Public Sector',
+    points: [
+      'Multi-agency coordination',
+      'Policy-to-practice translation',
+      'Public-private collaboration',
+      'Sustainable implementation systems',
+    ],
+    icon: '/icon-government-public-sector.png',
+  },
 ];
 ---
 
 <section class="bg-forest px-5 py-20 sm:px-8" id="value">
-	<div class="mx-auto max-w-7xl">
-		<SectionHeading title="Where We Create Value" tone="dark" />
+  <div class="mx-auto max-w-7xl">
+    <SectionHeading title="Where We Create Value" tone="dark" />
 
-		<div class="grid gap-10 md:grid-cols-3 md:gap-8">
-			{
-				columns.map((col) => (
+    <div class="grid gap-10 md:grid-cols-3 md:gap-8">
+      {
+        columns.map((col) => (
           <div class="text-center">
             <div class="mx-auto mb-5 flex h-20 w-20 items-center justify-center">
               <img src={col.icon} alt={col.title} class="h-full w-full object-contain" />
             </div>
             <h3 class="font-display text-xl font-semibold text-gold">{col.title}</h3>
             <ul class="mt-4 space-y-2.5 text-left">
-          {col.points.map((point) => (
-            <li class="flex items-start gap-2.5 font-sans text-sm leading-snug text-white/85">
-              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-              {point}
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))
-  }
-	</div>
+              {col.points.map((point) => (
+                <li class="flex items-start gap-2.5 font-sans text-sm leading-snug text-white/85">
+                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>
