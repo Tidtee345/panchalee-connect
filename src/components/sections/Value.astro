@@ -48,15 +48,15 @@ const columns = [
             </div>
             <h3 class="font-display text-xl font-semibold text-gold">{col.title}</h3>
             <ul class="mt-4 space-y-2.5 text-left">
-								<li class="flex items-start gap-2.5 font-sans text-sm leading-snug text-white/85">
-									<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-									{point}
-								</li>
-							))}
-						</ul>
-					</div>
-				))
-			}
-		</div>
+          {col.points.map((point) => (
+            <li class="flex items-start gap-2.5 font-sans text-sm leading-snug text-white/85">
+              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+              {point}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
 	</div>
 </section>
