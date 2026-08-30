@@ -25,11 +25,11 @@ const impacts = [
 ];
 
 const worlds = [
-    { label: 'Healthcare', icon: 'heart' },
-    { label: 'Public Policy', icon: 'landmark' },
-    { label: 'Stakeholder Engagement', icon: 'users' },
-    { label: 'Medical Societies', icon: 'award' },
-    { label: 'Human Impact', icon: 'spark' },
+    { label: 'Healthcare', icon: '/images/Healthcare.png' },
+    { label: 'Public Policy', icon: '/images/PublicPolicy.png' },
+    { label: 'Stakeholder Engagement', icon: '/images/Stakeholder.png' },
+    { label: 'Medical Societies', icon: '/images/MedicalSocieties.png' },
+    { label: 'Human Impact', icon: '/images/HumanImpact.png' },
 ];
 ---
 
@@ -90,29 +90,11 @@ const worlds = [
 						worlds.map((world) => (
 							<li class="flex flex-col items-center gap-2 text-center">
 								<span class="flex h-11 w-11 items-center justify-center rounded-full border border-gold/40 text-gold">
-									<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-										{world.icon === 'heart' && (
-											<path d="M19.5 12.5c0 4.5-7.5 8-7.5 8s-7.5-3.5-7.5-8a4.5 4.5 0 0 1 7.5-3.3 4.5 4.5 0 0 1 7.5 3.3Z" />
-										)}
-										{world.icon === 'landmark' && <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-5h6v5" />}
-										{world.icon === 'users' && (
-											<>
-												<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-												<circle cx="9" cy="7" r="4" />
-												<path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-											</>
-										)}
-										{world.icon === 'award' && (
-											<>
-												<circle cx="12" cy="9" r="5" />
-												<path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5" />
-											</>
-										)}
-										{world.icon === 'spark' && (
-											<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />
-										)}
-									</svg>
-								</span>
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        {world.icon === 'heart' && (...)}
+        ...
+    </svg>
+</span>
 								<span class="font-sans text-[11px] leading-tight font-medium text-ink">{world.label}</span>
 							</li>
 						))
