@@ -1,32 +1,34 @@
-const impacts = [
+const base = import.meta.env.BASE_URL;
+
+export const impacts = [
   {
     title: 'Medical Society Development',
     desc: 'Strengthen relevance, governance, and member value so societies can lead with clarity.',
-    icon: '/images/medical-society.png',
+    icon: `${base}images/medical-society.png`,
   },
   {
     title: 'Stakeholder Alignment',
     desc: 'Build shared understanding across clinical, policy, industry, and community voices.',
-    icon: '/images/stakeholder-alignment.png',
+    icon: `${base}images/stakeholder-alignment.png`,
   },
   {
     title: 'Capability Building',
     desc: 'Equip leaders and teams with the skills to navigate complexity and sustain progress.',
-    icon: '/images/capability-building.png',
+    icon: `${base}images/capability-building.png`,
   },
   {
     title: 'Impact Measurement',
     desc: 'Define meaningful indicators that connect human outcomes to strategic decisions.',
-    icon: '/images/impact-measurement.png',
+    icon: `${base}images/impact-measurement.png`,
   },
 ];
 
-const worlds = [
-  { label: 'Healthcare', icon: '/images/Healthcare.png' },
-  { label: 'Public Policy', icon: '/images/PublicPolicy.png' },
-  { label: 'Stakeholder Engagement', icon: '/images/Stakeholder.png' },
-  { label: 'Medical Societies', icon: '/images/MedicalSocieties.png' },
-  { label: 'Human Impact', icon: '/images/HumanImpact.png' },
+export const worlds = [
+  { label: 'Healthcare', icon: `${base}images/Healthcare.png` },
+  { label: 'Public Policy', icon: `${base}images/PublicPolicy.png` },
+  { label: 'Stakeholder Engagement', icon: `${base}images/Stakeholder.png` },
+  { label: 'Medical Societies', icon: `${base}images/MedicalSocieties.png` },
+  { label: 'Human Impact', icon: `${base}images/HumanImpact.png` },
 ];
 ---
 
