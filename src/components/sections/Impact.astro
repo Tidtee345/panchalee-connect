@@ -86,18 +86,18 @@ const worlds = [
 
 			<div class="mt-10 rounded-sm border border-line bg-cream p-5 sm:p-6">
       <p class="font-display text-base font-semibold text-forest">We bridge five worlds:</p>
-      <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-5">
-        {
-          worlds.map((world) => (
+     <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-5">
+    {
+        worlds.map((world) => (
             <li class="flex flex-col items-center gap-2 text-center">
-              <span class="flex h-11 w-11 items-center justify-center rounded-full border border-gold/40 overflow-hidden p-2">
-                <img src={world.icon} alt={world.label} class="w-full h-full object-contain" />
-              </span>
-              <span class="font-sans text-[11px] leading-tight font-medium text-ink">{world.label}</span>
+                <span class="flex h-11 w-11 items-center justify-center rounded-full border border-gold/40 overflow-hidden p-2">
+                    <img src={world.icon} alt={world.label} class="w-full h-full object-contain" />
+                </span>
+                <span class="font-sans text-[11px] leading-tight font-medium text-ink">{world.label}</span>
             </li>
-          ))
-        }
-      </ul>
+        ))
+    }
+</ul>
     </div>
 		</div>
 	</div>
