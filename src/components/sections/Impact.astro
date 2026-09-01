@@ -24,7 +24,10 @@ const impacts = [
     },
 ];
 ---
-// ประกาศตัวแปร worlds ให้อยู่ข้างบนสุดภายในบล็อก --- นี้ให้ถูกต้อง
+const base = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : `${import.meta.env.BASE_URL}/`;
+
 const worlds = [
     { label: 'Healthcare', icon: `${base}Healthcare.png` },
     { label: 'Public Policy', icon: `${base}PublicPolicy.png` },
