@@ -7,12 +7,12 @@ const base = import.meta.env.BASE_URL;
         class="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-16 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12"
     >
         <div class="flex items-start gap-5">
-            <!-- ส่วนต้นไม้สีทอง พร้อมเอฟเฟกต์แสงวิ่งเฉพาะเนื้อรูป -->
-            <div class="tree-container hidden shrink-0 sm:block">
+            <!-- ส่วนต้นไม้สีทอง พร้อมเอฟเฟกต์เรืองแสงหายใจนุ่มๆ (Breathing Glow) -->
+            <div class="hidden shrink-0 sm:block">
                 <img
                     src={`${base}Tree of life.png`}
                     alt="Tree of Life"
-                    class="h-28 w-auto opacity-90 tree-image"
+                    class="h-28 w-auto opacity-90 tree-glow"
                     width="100"
                     height="120"
                 />
@@ -53,56 +53,19 @@ const base = import.meta.env.BASE_URL;
 </footer>
 
 <style>
-    .tree-container {
-        position: relative;
-        display: inline-block;
+    /* เอฟเฟกต์แสงเรืองแสงหายใจนุ่มๆ (Breathing Glow) เสริมฮวงจุ้ย */
+    .tree-glow {
+        animation: tree-breathing 4s infinite ease-in-out;
     }
 
-    /* ใช้ Mask เพื่อให้แสงวิ่งอยู่เฉพาะในตัวรูปต้นไม้เท่านั้น ไม่ล้นเป็นกรอบสี่เหลี่ยม */
-    .tree-image {
-        mask-image: url('/Tree of life.png');
-        -webkit-mask-image: url('/Tree of life.png');
-        mask-size: contain;
-        -webkit-mask-size: contain;
-        mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
-        position: relative;
-    }
-
-    /* สร้างแสงวิ่งผ่านเนื้อรูปต้นไม้ */
-    .tree-container::after {
-        content: '';
-        position: absolute;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            to top,
-            transparent 0%,
-            rgba(255, 255, 255, 0.4) 50%,
-            transparent 100%
-        );
-        pointer-events: none;
-        animation: tree-sweep 4s infinite ease-in-out;
-        /* ใช้ Mask เดียวกันเพื่อให้แสงตัดขอบตามรูปต้นไม้เป๊ะๆ */
-        mask-image: url('/Tree of life.png');
-        -webkit-mask-image: url('/Tree of life.png');
-        mask-size: contain;
-        -webkit-mask-size: contain;
-        mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
-    }
-
-    @keyframes tree-sweep {
-        0% {
-            top: 100%;
+    @keyframes tree-breathing {
+        0%, 100% {
+            opacity: 0.85;
+            filter: drop-shadow(0 0 2px rgba(247, 224, 128, 0.2));
         }
         50% {
-            top: -100%;
-        }
-        100% {
-            top: -100%;
+            opacity: 1;
+            filter: drop-shadow(0 0 12px rgba(247, 224, 128, 0.6));
         }
     }
 </style>
