@@ -7,16 +7,15 @@ const base = import.meta.env.BASE_URL;
         class="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-16 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12"
     >
         <div class="flex items-start gap-5">
-            <!-- ส่วนต้นไม้สีทอง พร้อมเอฟเฟกต์แสงวิ่งจากรากขึ้นสู่ใบ -->
-            <div class="relative hidden overflow-hidden rounded-lg sm:block">
+            <!-- ส่วนต้นไม้สีทอง พร้อมเอฟเฟกต์แสงวิ่งเฉพาะเนื้อรูป -->
+            <div class="tree-container hidden shrink-0 sm:block">
                 <img
                     src={`${base}Tree of life.png`}
                     alt="Tree of Life"
-                    class="h-28 w-auto shrink-0 opacity-90 tree-shimmer-img"
+                    class="h-28 w-auto opacity-90 tree-image"
                     width="100"
                     height="120"
                 />
-                <div class="shimmer-sweep" aria-hidden="true"></div>
             </div>
             
             <div>
@@ -54,12 +53,25 @@ const base = import.meta.env.BASE_URL;
 </footer>
 
 <style>
-    .tree-shimmer-img {
+    .tree-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* ใช้ Mask เพื่อให้แสงวิ่งอยู่เฉพาะในตัวรูปต้นไม้เท่านั้น ไม่ล้นเป็นกรอบสี่เหลี่ยม */
+    .tree-image {
+        mask-image: url('/Tree of life.png');
+        -webkit-mask-image: url('/Tree of life.png');
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
         position: relative;
     }
 
-    /* แถบแสงเงาสะท้อน (Shimmer Sweep) วิ่งจากล่างขึ้นบน */
-    .shimmer-sweep {
+    /* สร้างแสงวิ่งผ่านเนื้อรูปต้นไม้ */
+    .tree-container::after {
+        content: '';
         position: absolute;
         top: -100%;
         left: 0;
@@ -67,15 +79,22 @@ const base = import.meta.env.BASE_URL;
         height: 100%;
         background: linear-gradient(
             to top,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(247, 224, 128, 0.45) 50%,
-            rgba(255, 255, 255, 0) 100%
+            transparent 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            transparent 100%
         );
         pointer-events: none;
-        animation: sweep-up 4s infinite ease-in-out;
+        animation: tree-sweep 4s infinite ease-in-out;
+        /* ใช้ Mask เดียวกันเพื่อให้แสงตัดขอบตามรูปต้นไม้เป๊ะๆ */
+        mask-image: url('/Tree of life.png');
+        -webkit-mask-image: url('/Tree of life.png');
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
     }
 
-    @keyframes sweep-up {
+    @keyframes tree-sweep {
         0% {
             top: 100%;
         }
