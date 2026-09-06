@@ -3,28 +3,25 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <section class="relative overflow-hidden bg-forest">
-	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
-    <img
-        src={`${base}images/hero-bg-portrait.png`}
-        alt=""
-        class="h-full w-full object-cover object-[70%_center] lg:object-right"
-    />
-    <img
-        src={`${base}images/portrait.png`}
-        alt="Panchalee"
-        class="absolute bottom-0 right-0 h-[60%] w-auto object-contain object-bottom z-10"
-    />
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <img
+            src={`${base}/images/hero-bg-portrait.png`}
+            alt="Panchalee Connect"
+            class="h-full w-full object-cover object-[70%_center] lg:object-right"
+        />
+    </div>
+
     <div
         class="absolute inset-0 bg-gradient-to-r from-forest via-forest/80 to-transparent lg:w-3/4 lg:via-forest/40 z-20"
     >
     </div>
+
     <div
         class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-forest to-transparent z-20"
     >
     </div>
-</div>
 
-	<div
+    <div
         class="relative z-10 grid min-h-[600px] w-full items-center gap-10 px-6 py-16 sm:px-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4 lg:py-24 lg:pl-16 xl:pl-24"
     >
         <div class="max-w-xl pt-10 lg:pt-0">
