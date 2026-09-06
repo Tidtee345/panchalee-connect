@@ -3,7 +3,7 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <section class="relative overflow-hidden bg-forest">
-    <!-- ภาพพื้นหลัง (คงความสวยงามเต็มจอ) -->
+    <!-- ภาพพื้นหลังต้นฉบับ (แสดงผลเต็มจอคอม / ลงมาอยู่ด้านล่างบนมือถือ) -->
     <div
         class="relative lg:absolute lg:inset-0 w-full h-[320px] sm:h-[400px] lg:h-full pointer-events-none mt-8 lg:mt-0"
         aria-hidden="true"
@@ -13,17 +13,6 @@ const base = import.meta.env.BASE_URL;
             alt="Panchalee Connect"
             class="h-full w-full object-cover object-[70%_center] lg:object-right"
         />
-        
-        <!-- **ส่วนเพิ่มเอฟเฟกต์แสง Node กะพริบ** -->
-        <div class="absolute inset-0 w-full h-full overflow-hidden">
-            <!-- สร้างจุดแสงหลายๆ จุด กระจายตามตำแหน่งที่เหมาะสมบนต้นไม้ -->
-            <div class="node-light animate-node-pulse" style="top: 45%; left: 78%; animation-delay: 0.2s;"></div>
-            <div class="node-light animate-node-pulse" style="top: 52%; left: 85%; animation-delay: 1.5s;"></div>
-            <div class="node-light animate-node-pulse" style="top: 40%; left: 92%; animation-delay: 0.7s;"></div>
-            <div class="node-light animate-node-pulse" style="top: 65%; left: 88%; animation-delay: 2.1s;"></div>
-            <div class="node-light animate-node-pulse" style="top: 75%; left: 95%; animation-delay: 1.1s;"></div>
-            <!-- สามารถเพิ่มจุดแสงอื่นๆ ตามต้องการ โดยก๊อปปี้บรรทัดด้านบนและเปลี่ยน top, left, animation-delay -->
-        </div>
     </div>
 
     <!-- ส่วนเนื้อหาและข้อความ -->
@@ -64,29 +53,3 @@ const base = import.meta.env.BASE_URL;
         </div>
     </div>
 </section>
-
-<!-- ส่วนเพิ่ม Style ของ Node Light และ Animation Keyframes -->
-<style>
-    /* สไตล์ของจุดแสง (Node) */
-    .node-light {
-        position: absolute;
-        width: 8px; /* ขนาดของ Node */
-        height: 8px;
-        background-color: #f7e080; /* สีทองอ่อนๆ เข้ากับธีม */
-        border-radius: 50%; /* ทำให้เป็นวงกลม */
-        box-shadow: 0 0 8px 2px #f7e080; /* ใส่แสง Glow รอบๆ */
-        opacity: 0; /* เริ่มต้นซ่อนไว้ */
-    }
-
-    /* กำหนด Keyframe สำหรับการกะพริบแบบ Pulse (วาบขึ้นแล้วจางลง) */
-    @keyframes node-pulse {
-        0% { opacity: 0.3; transform: scale(0.8); }
-        50% { opacity: 1; transform: scale(1.2); } /* สว่างวาบและขยายใหญ่ขึ้นเล็กน้อย */
-        100% { opacity: 0.3; transform: scale(0.8); }
-    }
-
-    /* คลาสเรียกใช้ Animation */
-    .animate-node-pulse {
-        animation: node-pulse 3s infinite ease-in-out; /* ปรับความเร็วได้ตรงนี้ 3s คือค่อยๆ กระพริบช้าๆ */
-    }
-</style>
