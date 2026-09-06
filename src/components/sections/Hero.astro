@@ -3,10 +3,20 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <section class="relative overflow-hidden bg-forest">
+    <!-- ภาพพื้นหลังพอร์เทรต -->
+    <div class="pointer-events-none absolute inset-0 opacity-40 lg:opacity-100" aria-hidden="true">
+        <img
+            src={`${base}images/hero-bg-portrait.png`}
+            alt="Panchalee Connect"
+            class="h-full w-full object-cover object-[70%_center] lg:object-right"
+        />
+    </div>
+
+    <!-- ส่วนเนื้อหาและข้อความ -->
     <div
-        class="relative z-10 grid min-h-[600px] w-full grid-cols-1 items-center gap-10 px-6 py-16 sm:px-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4 lg:py-24 lg:pl-16 xl:pl-24"
+        class="relative z-10 grid min-h-[600px] w-full items-center gap-10 px-6 py-16 sm:px-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4 lg:py-24 lg:pl-16 xl:pl-24"
     >
-        <div class="max-w-xl pt-10 lg:pt-0 order-1 lg:order-1">
+        <div class="max-w-xl pt-10 lg:pt-0">
             <h1
                 class="font-display text-4xl leading-[1.08] font-bold tracking-wide text-gold uppercase sm:text-5xl lg:text-[3.25rem]"
             >
@@ -37,14 +47,6 @@ const base = import.meta.env.BASE_URL;
                     Explore Our Expertise
                 </a>
             </div>
-        </div>
-
-        <div class="pointer-events-none order-2 lg:order-2 absolute inset-0 lg:static h-full w-full lg:h-auto opacity-25 lg:opacity-100" aria-hidden="true">
-            <img
-                src={`${base}images/hero-bg-portrait.png`}
-                alt="Panchalee Connect"
-                class="h-full w-full object-cover object-[70%_center] lg:object-right"
-            />
         </div>
     </div>
 </section>
