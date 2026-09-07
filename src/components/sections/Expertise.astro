@@ -54,16 +54,12 @@ const frameworks = [
 				{
 					frameworks.map((item) => (
 						<li class="flex gap-4 rounded-sm border border-gold/25 bg-forest-soft/40 p-4 sm:p-5">
-							<span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/40 text-gold">
-								{item.icon === 'dna' ? (
-									<img src={`${base}images/dna.svg`} alt="" class="h-7 w-7 object-contain" />
-								) : (
-									<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-										<path d="M8 12c0-3 2-5 4-7 2 2 4 4 4 7a4 4 0 1 1-8 0Z" />
-										<path d="M8 12h8" />
-										<path d="M10 16c0 2 1 4 2 5 1-1 2-3 2-5" />
-									</svg>
-								)}
+							<span class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden">
+								<img 
+									src={`${base}${item.icon.startsWith('/') ? item.icon.slice(1) : item.icon}`} 
+									alt={item.title} 
+									class="h-full w-full object-contain scale-[2.2]" 
+								/>
 							</span>
 							<div>
 								<h3 class="font-display text-lg font-semibold text-gold">{item.title}</h3>
