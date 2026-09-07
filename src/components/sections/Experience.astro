@@ -22,18 +22,14 @@ const experiences = [
 			{
 				experiences.map((item) => (
 					<li class="flex flex-col items-center text-center">
-						<!-- ตรงนี้คือ div ที่ครอบไอคอนครับ ปรับขนาดตรงนี้ -->
-						<!-- กำหนดความกว้าง-สูงให้เท่ากันทุกอัน เช่น h-28 w-28 -->
-						<div class="flex h-28 w-28 items-center justify-center">
+						<div class="flex h-48 w-full items-center justify-center">
 							<img 
 								src={`${base}${item.icon.startsWith('/') ? item.icon.slice(1) : item.icon}`} 
 								alt={item.label} 
-								<!-- ปรับให้รูปภาพขยายเต็มกรอบด้วย h-full w-full object-contain -->
-								class="h-full w-full object-contain" 
+								class="max-h-44 w-auto object-contain" 
 							/>
 						</div>
-						<!-- ปรับระยะห่างเล็กน้อย mt-6 และขนาดตัวอักษร -->
-						<span class="mt-6 w-40 font-sans text-xs sm:text-sm leading-snug font-medium text-ink">
+						<span class="mt-4 w-40 font-sans text-xs sm:text-sm leading-snug font-medium text-ink">
 							{item.label}
 						</span>
 					</li>
