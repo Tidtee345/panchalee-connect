@@ -22,21 +22,21 @@ const experiences = [
 			{
 				experiences.map((item) => (
 					<li class="flex flex-col items-center text-center">
-						<!-- ดันขนาดไอคอนให้ใหญ่ขึ้นเต็มที่ด้วย h-40 และ max-h-36 -->
-						<div class="flex h-40 w-full items-center justify-center">
+						<!-- ขยายความสูงกล่องเป็น h-48 และความสูงรูปภาพสูงสุดเป็น max-h-44 เพื่อความใหญ่เต็มพิกัด -->
+						<div class="flex h-48 w-full items-center justify-center">
 							<img 
 								src={`${base}${item.icon.startsWith('/') ? item.icon.slice(1) : item.icon}`} 
-								alt={item.label} 
-								class="max-h-36 w-auto object-contain" 
-							/>
-						</div>
-						<!-- ปรับความกว้างกล่องข้อความให้รองรับขนาดที่ใหญ่ขึ้น และระยะห่าง mt-4 -->
-						<span class="mt-4 w-36 font-sans text-xs sm:text-sm leading-snug font-medium text-ink">
-							{item.label}
-						</span>
-					</li>
-				))
-			}
-		</ul>
-	</div>
+							alt={item.label} 
+							class="max-h-44 w-auto object-contain" 
+						/>
+					</div>
+					<!-- ปรับขนาดบล็อกข้อความให้บาลานซ์กับไอคอนที่ใหญ่ขึ้น -->
+					<span class="mt-4 w-40 font-sans text-xs sm:text-sm leading-snug font-medium text-ink">
+						{item.label}
+					</span>
+				</li>
+			))
+		}
+	</ul>
+</div>
 </section>
