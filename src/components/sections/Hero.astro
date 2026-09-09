@@ -38,16 +38,45 @@ const base = import.meta.env.BASE_URL;
                 </a>
             </div>
         </div>
+
+        <!-- ฝั่งขวา: เพิ่มพื้นที่สำหรับวางลายเซ็นและตำแหน่งซ้อนทับหรือจัดวางร่วมกัน -->
+        <div class="relative hidden lg:block h-full w-full pointer-events-none">
+            <img
+                src={`${base}images/hero-bg-portrait.png`}
+                alt="Panchalee Connect"
+                class="absolute inset-0 h-full w-full object-cover object-right"
+            />
+            
+            <!-- กล่องแสดงลายเซ็นและตำแหน่ง (วางทับมุมล่างขวาของรูปภาพ Hero) -->
+            <div class="absolute bottom-12 right-12 z-20 flex flex-col items-end pointer-events-auto bg-forest/80 backdrop-blur-md p-6 rounded-sm border border-gold/20 shadow-2xl">
+                <img
+                    src={`${base}signature.png`}
+                    alt="Panchalee Chodchan Signature"
+                    class="h-12 w-auto object-contain"
+                />
+                <p class="mt-3 font-sans text-xs tracking-widest text-gold uppercase font-semibold text-right">
+                    Founder & Strategic Systems Architect
+                </p>
+            </div>
+        </div>
     </div>
 
-    <div
-        class="relative lg:absolute lg:inset-0 w-full h-[280px] sm:h-[380px] lg:h-full pointer-events-none mb-6 lg:mb-0"
-        aria-hidden="true"
-    >
+    <!-- สำหรับหน้าจอ Mobile/Tablet (แสดงรูปภาพปกติแบบปรับ responsive) -->
+    <div class="relative lg:hidden w-full h-[320px] sm:h-[400px] mb-6 px-6">
         <img
             src={`${base}images/hero-bg-portrait.png`}
             alt="Panchalee Connect"
-            class="h-full w-full object-cover object-[70%_center] lg:object-right"
+            class="h-full w-full object-cover object-[70%_center] rounded-sm"
         />
+        <div class="mt-4 flex flex-col items-center text-center">
+            <img
+                src={`${base}signature.png`}
+                alt="Panchalee Chodchan Signature"
+                class="h-10 w-auto object-contain"
+            />
+            <p class="mt-2 font-sans text-xs tracking-widest text-gold uppercase font-semibold">
+                Founder & Strategic Systems Architect
+            </p>
+        </div>
     </div>
 </section>
