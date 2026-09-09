@@ -25,10 +25,12 @@ const frameworks = [
 ];
 ---
 
-<section class="bg-forest px-5 py-20 sm:px-8" id="expertise">
+<section class="bg-forest px-5 py-20 sm:px-8">
 	<div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
 		<div>
-			<SectionHeading title="Areas of Expertise" tone="dark" align="left" class="mb-8 justify-start" />
+			<div id="expertise" class="scroll-mt-28">
+				<SectionHeading title="Areas of Expertise" tone="dark" align="left" class="mb-8 justify-start" />
+			</div>
 			<ul class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
 				{
 					expertise.map((item) => (
