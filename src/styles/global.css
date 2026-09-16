@@ -25,6 +25,10 @@ section[id] {
 	scroll-margin-top: 5.75rem;
 }
 
+#expertise {
+	scroll-margin-top: 6rem;
+}
+
 #contact {
 	scroll-margin-top: 0;
 	box-sizing: border-box;
