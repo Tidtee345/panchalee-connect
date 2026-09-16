@@ -30,6 +30,10 @@ section[id] {
 	scroll-margin-top: 110px;
 }
 
+#experience {
+	scroll-margin-top: 100px;
+}
+
 #contact {
 	scroll-margin-top: 0;
 	box-sizing: border-box;
