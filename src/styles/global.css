@@ -25,11 +25,11 @@ section[id] {
 	scroll-margin-top: 5.75rem;
 }
 
-#expertise,
 #frameworks {
 	scroll-margin-top: 110px;
 }
 
+#expertise,
 #experience {
 	scroll-margin-top: 100px;
 }
