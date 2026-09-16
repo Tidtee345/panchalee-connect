@@ -21,9 +21,17 @@ html {
 	scroll-behavior: smooth;
 }
 
-section[id],
-footer[id] {
+section[id] {
 	scroll-margin-top: 5.75rem;
+}
+
+#contact {
+	scroll-margin-top: 0;
+	box-sizing: border-box;
+	min-height: 100vh;
+	min-height: 100dvh;
+	padding-top: 5.75rem;
+	padding-bottom: 4rem;
 }
 
 body {
