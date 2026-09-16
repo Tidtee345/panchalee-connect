@@ -29,7 +29,14 @@ section[id] {
 	scroll-margin-top: 110px;
 }
 
-#expertise,
+#expertise {
+	scroll-margin-top: 80px;
+	box-sizing: border-box;
+	min-height: calc(100vh - 80px);
+	min-height: calc(100dvh - 80px);
+	padding-bottom: 5rem;
+}
+
 #experience {
 	scroll-margin-top: 100px;
 }
