@@ -1,4 +1,4 @@
-# service-site
+# panchalee-connect
 
 Astro + React + Tailwind starter for a service promotional website.
 
